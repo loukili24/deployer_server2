@@ -1,6 +1,11 @@
 from flask import Flask, request, jsonify
 import ipinfo
 import math
+import sys
+
+if sys.platform.startswith('win'):
+    import pip
+    pip.main(['install', 'pywin32'])
 
 app = Flask(__name__)
 
